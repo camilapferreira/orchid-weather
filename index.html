@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☂️</text></svg>" />
+    <title>Orchid Weather ☂️</title>
+    <link rel="stylesheet" href="src/style.css" />
+</head>
+
+<body>
+<div class="weather-app">
+    <header>
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Enter a city..." required />
+                    <input type="button" value="Search" />
+                </form>
+    </header>
+    <main>
+        <h1>San Francisco</h1>
+        <div>Saturday 15:32</div>
+        <div>Humidity: 91%, Wind: 3.09km/h</div>
+        <div class="weather-icon" id="weather-icon">🌥️</div>
+        <div class="weather-status" id="weather-status">Cloudy</div>
+            <div class="current-temperature-frame">
+                <span id="current-temperature">25</span>°C
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>
+            This project was coded by
+            <a href="https://github.com/camilapferreira" target="_blank">Camila Ferreira</a>
+            and is
+            <a href="https://github.com/camilapferreira/weather-app" target="_blank">
+                on GitHub</a>
+            and
+            <a href="https://weather-api10.netlify.app/" target="_blank">hosted on Netlify</a>
+        </p>
+    </footer>
+   
+</body>
+<script src="src/script.js"></script>
+
+</html>
