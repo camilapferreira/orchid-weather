@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☂️</text></svg>" />
-    <title>Orchid Weather ☂️</title>
-    <link rel="stylesheet" href="src/style.css" />
-</head>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☂️</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Honk&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
-<div class="weather-app">
-    <header>
-                <form id="search-form">
-                    <input type="text" id="search-input" placeholder="Enter a city..." required />
-                    <input type="button" value="Search" />
-                </form>
-    </header>
-    <main>
+    <title>Orchid Weather</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+
+  <body>
+    <div class="weather-app">
+      <header>
+        <form id="search-form">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Enter a city..."
+            required
+          />
+          <input type="button" value="Search" />
+        </form>
+      </header>
+      <main>
         <h1>San Francisco</h1>
         <div>Saturday 15:32</div>
         <div>Humidity: 91%, Wind: 3.09km/h</div>
         <div class="weather-icon" id="weather-icon">🌥️</div>
         <div class="weather-status" id="weather-status">Cloudy</div>
-            <div class="current-temperature-frame">
-                <span id="current-temperature">25</span>°C
-            </div>
+        <div class="current-temperature-frame">
+          <span id="current-temperature">25</span>°C
         </div>
-    </main>
-    <footer>
+      </main>
+      <footer>
+        <hr />
         <p>
-            This project was coded by
-            <a href="https://github.com/camilapferreira" target="_blank">Camila Ferreira</a>
-            and is
-            <a href="https://github.com/camilapferreira/weather-app" target="_blank">
-                on GitHub</a>
-            and
-            <a href="https://weather-api10.netlify.app/" target="_blank">hosted on Netlify</a>
+          This project was coded by
+          <a href="https://github.com/camilapferreira" target="_blank"
+            >Camila Ferreira</a
+          >
+          and is
+          <a
+            href="https://github.com/camilapferreira/weather-app"
+            target="_blank"
+          >
+            on GitHub</a
+          >
+          and
+          <a href="https://weather-api10.netlify.app/" target="_blank"
+            >hosted on Netlify</a
+          >
         </p>
-    </footer>
-   
-</body>
-<script src="src/script.js"></script>
-
+      </footer>
+    </div>
+  </body>
+  <script src="src/script.js"></script>
 </html>
