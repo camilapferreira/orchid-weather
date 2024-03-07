@@ -10,3 +10,6 @@ Orchid App is a simple web application that allows users to search for current w
 - Display current temperature
 - Show current date and time
 - Responsive design for desktop and mobile devices (on development)
+
+## Access the aplication
+https://orchid-app.netlify.app/
