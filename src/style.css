@@ -4,19 +4,17 @@ body {
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: aliceblue;
 }
 
 .material-symbols-outlined {
-  color: rgb(121, 32, 205);
+  color: rgb(5, 9, 102);
   font-size: 40px;
 }
 
 .weather-app {
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.7)
-  );
+  background: linear-gradient(rgba(5, 9, 102, 0.7), rgba(255, 255, 255, 0.7));
   background-size: cover;
   background-attachment: fixed;
   border-radius: 8px;
@@ -37,16 +35,22 @@ body {
 
 .search-button {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(121, 32, 205);
-  color: rgb(255, 255, 255);
+  background-color: rgb(181, 183, 235);
+  color: rgb(7, 4, 57);
   box-shadow: 5px 5px rgba(65, 50, 100, 0.1);
   padding: 10px 15px;
   border: none;
   border-radius: 6px;
 }
 .search-button:hover {
-  background-color: rgb(214, 18, 205);
+  background-color: rgb(121, 32, 205);
   color: rgb(255, 255, 255);
+}
+
+.weather-app-data {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
 }
 
 h1 {
@@ -54,6 +58,7 @@ h1 {
   font-weight: 550;
   font-size: 38px;
   margin: 0 auto;
+  font-weight: 300;
 }
 p {
   font-weight: 300;
@@ -61,11 +66,24 @@ p {
   margin: 0 auto;
 }
 .current-temperature-frame {
-  font-size: 50px;
+  font-size: 90px;
+  margin: 10px 15px 0px 0px;
+  font-family: system-ui;
+  font-weight: 100;
 }
 
 .weather-icon {
   font-size: 78px;
+  margin: -5px 15px -15px -3px;
+}
+.weather-status {
+  font-size: 20px;
+  margin: 7px 0;
+}
+
+.weather-app-humidity-wind-status {
+  font-weight: 250;
+  font-size: 14px;
 }
 
 footer a {
