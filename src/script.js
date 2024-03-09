@@ -14,6 +14,8 @@ function updateWeather(response) {
   let wind = data.wind.speed;
   let description = condition.description;
   let imageIcon = condition.icon_url;
+  let icon = elementById("#weather-icon");
+  icon.src = imageIcon;
   let date = new Date(data.time * 1000);
   let timeInfo = formatDate(date);
 
@@ -21,8 +23,6 @@ function updateWeather(response) {
   setValue("#api-humidity", humidity);
   setValue("#api-wind-speed", wind);
   setValue("#weather-status", description);
-  let icon = elementById("#weather-icon");
-  icon.src = imageIcon;
   setValue("#day-time", timeInfo);
 
   function formatDate(date) {
