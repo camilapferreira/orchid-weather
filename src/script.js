@@ -24,31 +24,31 @@ function updateWeather(response) {
   setValue("#api-wind-speed", wind);
   setValue("#weather-status", description);
   setValue("#day-time", timeInfo);
+}
 
-  function formatDate(date) {
-    let hour = date.getHours();
-    let minutes = date.getMinutes();
+function formatDate(date) {
+  let hour = date.getHours();
+  let minutes = date.getMinutes();
 
-    let days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
-    let day = days[date.getDay()];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
 
-    if (minutes < 10) {
-      minutes = `0${minutes}`;
-    }
-    if (hour < 10) {
-      hour = `0${hour}`;
-    }
-
-    return `${day} ${hour}:${minutes}`;
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
   }
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+
+  return `${day} ${hour}:${minutes}`;
 }
 
 function searchData(city) {
