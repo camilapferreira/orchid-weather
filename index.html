@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Honk&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>Orchid Weather</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
@@ -29,7 +30,7 @@
             required
           />
           <input
-            type="button"
+            type="submit"
             value="Search"
             class="search-button"
             id="search-button"
@@ -39,16 +40,24 @@
       <main>
         <div class="weather-app-data">
           <div class="weather-app-city-time-info">
-            <h1 class="weather-app-city">San Francisco</h1>
+            <h1 class="weather-app-city" id="weather-app-city">
+              San Francisco
+            </h1>
             <p class="weather-app-day-time">Saturday 15:32</p>
-            <div class="weather-icon" id="weather-icon">🌥️</div>
+            <div class="weather-icon">
+              <img
+                id="weather-icon"
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-night.png"
+                alt="weather icon"
+              />
+            </div>
             <div class="weather-status" id="weather-status">Cloudy</div>
           </div>
           <div class="weather-temperature-container">
             <div class="current-temperature-frame">
-              <span id="current-temperature">25</span>°
+              <span id="current-temperature">12</span>°
               <div class="weather-app-humidity-wind-status">
-                Humidity: <span id="api-current-temperature">91</span>% <br />
+                Humidity: <span id="api-humidity">41</span>% <br />
                 Wind: <span id="api-wind-speed">3.09</span>km/h
               </div>
             </div>

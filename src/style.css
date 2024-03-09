@@ -78,12 +78,11 @@ p {
 }
 .weather-status {
   font-size: 20px;
-  margin: 7px 0;
 }
 
 .weather-app-humidity-wind-status {
   font-weight: 250;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 footer a {
