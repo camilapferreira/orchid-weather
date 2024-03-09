@@ -77,7 +77,8 @@ p {
   margin: -5px 15px -15px -3px;
 }
 .weather-status {
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .weather-app-humidity-wind-status {
