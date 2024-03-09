@@ -14,6 +14,8 @@ function updateWeather(response) {
   let wind = data.wind.speed;
   let description = condition.description;
   let imageIcon = condition.icon_url;
+  let date = new Date(data.time * 1000);
+  let timeInfo = formatDate(date);
 
   setValue("#current-temperature", Math.round(temperature));
   setValue("#api-humidity", humidity);
@@ -21,18 +23,32 @@ function updateWeather(response) {
   setValue("#weather-status", description);
   let icon = elementById("#weather-icon");
   icon.src = imageIcon;
+  setValue("#day-time", timeInfo);
 
-  //   console.log(response);
-  //   let temperature = elementById("#current-temperature");
-  //   temperature.innerHTML = Math.round(response.data.temperature.current);
-  //   let humidity = elementById("#api-humidity");
-  //   humidity.innerHTML = response.data.temperature.humidity;
-  //   let windSpeed = elementById("#api-wind-speed");
-  //   windSpeed.innerHTML = response.data.wind.speed;
-  //   let condition = elementById("#weather-status");
-  //   condition.innerHTML = response.data.condition.description;
+  function formatDate(date) {
+    let hour = date.getHours();
+    let minutes = date.getMinutes();
 
-  //   let imageUrl = response.data.condition.icon_url;
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    let day = days[date.getDay()];
+
+    if (minutes < 10) {
+      minutes = `0${minutes}`;
+    }
+    if (hour < 10) {
+      hour = `0${hour}`;
+    }
+
+    return `${day} ${hour}:${minutes}`;
+  }
 }
 
 function searchData(city) {
