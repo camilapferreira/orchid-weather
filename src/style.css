@@ -1,5 +1,6 @@
 body {
-  background-image: url("https://metodologiasistemica.com.br/wp-content/uploads/2024/03/img-scaled.webp");
+  /* background-image: url("https://metodologiasistemica.com.br/wp-content/uploads/2024/03/img-scaled.webp"); */
+  background-image: url("file:///Users/pferreiracamila/projects/orchid-weather/img/img2.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -14,14 +15,19 @@ body {
 }
 
 .weather-app {
-  background: linear-gradient(rgba(5, 9, 102, 0.7), rgba(255, 255, 255, 0.7));
+  /* background: linear-gradient(rgba(254, 172, 25, 0.7), rgba(81, 6, 139, 0.7)); */
+  background: linear-gradient(
+    180deg,
+    rgba(145, 81, 1, 0.9) 3.2%,
+    rgba(74, 2, 110, 0.9) 90.3%
+  );
   background-size: cover;
   background-attachment: fixed;
   border-radius: 8px;
   margin: 30px auto;
   padding: 50px;
   max-width: 600px;
-  box-shadow: 0 20px 20px rgba(65, 50, 100, 0.8);
+  box-shadow: 0 10px 10px rgba(32, 18, 65, 0.8);
 }
 
 .search-input {
@@ -35,7 +41,7 @@ body {
 
 .search-button {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(181, 183, 235);
+  background-color: rgb(246 236 255);
   color: rgb(7, 4, 57);
   box-shadow: 5px 5px rgba(65, 50, 100, 0.1);
   padding: 10px 15px;
@@ -86,11 +92,26 @@ p {
   font-size: 20px;
 }
 
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0px;
+  text-align: center;
+}
+
+.max-temperature-forecast {
+  font-weight: 700;
+}
+
+.min-temperature-forecast {
+  opacity: 0.6;
+}
+
 footer a {
-  color: rgb(57, 4, 108);
+  color: rgb(176, 138, 213);
 }
 footer p {
-  color: rgb(16, 50, 80);
+  color: rgb(245, 214, 253);
   text-align: center;
   margin: 0 auto;
   font-size: 12px;
