@@ -62,35 +62,55 @@ function search(data) {
   let searchCity = document.querySelector("#search-input");
   let cityName = document.querySelector("#weather-app-city");
   cityName.innerHTML = searchCity.value;
-  searchData(searchCity.value);
+  city = searchCity.value;
+  searchData(city);
+  getForecast(city);
 }
 
 let searchInput = document.querySelector("#search-form");
 searchInput.addEventListener("submit", search);
 
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+  return days[date.getDay()];
+}
+
+function getForecast(city) {
+  let apiKey = "44b4d9f5e3a3baf490c33c5519ot4f0a";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `<div class="weather-forecast-day">
-            <div class="weather-forecast-date">${day}</div>
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `<div class="weather-forecast-day">
+            <div class="weather-forecast-date">${formatDay(day.time)}</div>
             <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-night.png"
+              src="${day.condition.icon_url}"
               alt=""
               width="56"
             />
             <div class="forecast-temperatures">
-              <span class="max-temperature-forecast">18°</span>
-              <span class="min-temperature-forecast">15°</span>
+              <span class="max-temperature-forecast">${Math.round(
+                day.temperature.maximum
+              )}°</span>
+              <span class="min-temperature-forecast">${Math.round(
+                day.temperature.minimum
+              )}°</span>
             </div>
           </div>`;
+    }
   });
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
 
-displayForecast();
+searchData("San Francisco");
+getForecast("San Francisco");
